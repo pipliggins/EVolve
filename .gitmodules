@@ -7,3 +7,4 @@
 	path = fastchem
 	url = git@github.com:exoclime/FastChem.git
 	branch = fastchem_2_dev
+	ignore = dirty
