@@ -20,11 +20,12 @@ EVolve is written in Python3, and is incompatible with Python 2.7. Two very usef
 2. Compile [FastChem](https://github.com/exoclime/FastChem):
    ```
    cd fastchem
+   git submodules update --init --recursive
    mkdir build & cd build
    cmake -DUSE_PYTHON==ON ..
    make
    ```
-   This will compile both the C++ code, and the python bindings which are used in EVolve to conect to FastChem.
+   This will pull the pybind11 module required for the python bindings, and compile both the C++ code, and the python bindings which are used in EVolve to conect to FastChem.
    
    **Note:** FastChem is an external C++ module, used to compute atmospheric equilibrium chemistry. Therefore, to run on Windows, I recommend using WSL (Windows Subsystem for Linux) to make the process of compiling the C code easier. If you encounter installation issues relating to the cmake version, I found the [accepted answer here](https://askubuntu.com/questions/1203635/installing-latest-cmake-on-ubuntu-18-04-3-lts-run-via-wsl-openssl-error) to work for me. A list of the suggested terminal commands can also be found at the bottom of this README file.   
   
