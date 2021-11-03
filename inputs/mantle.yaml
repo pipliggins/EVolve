@@ -1,0 +1,28 @@
+# Sets the mentle temperature, composition and total volatile content
+
+t: 1473.15          # temperature in K at which melts form
+mass: 4.01e+27      # mantle mass in g
+fo2_buffer: IW      # Rock buffer
+fo2: -1              # Relative to buffer
+ie_ratio: 0.1       # Intrusive/extrusive ratio: fraction of melt produced which degasses to the surface
+F: 0.1              # mantle averaged melt fraction
+
+
+composition:        # Melt composition for magma produced by mantle melting
+  sio2: 47.95
+  tio2: 1.67
+  al2o3: 17.32
+  feo: 10.24
+  mno: 0.17
+  mgo: 5.76
+  cao: 10.93
+  na2o: 3.45
+  k2o: 1.99
+  p2o5: 0.51
+
+# Volatile equivalents - actual speciation will be calculated based on fO2?
+mantle_volatiles:    # ppm in the mantle
+  H2O: 410   # 100
+  CO2: 58   # 1
+  S: 62    # 10
+  N: 0.41        # 0.7

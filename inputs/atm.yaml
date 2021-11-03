@@ -1,0 +1,31 @@
+# Sets the atmospheric settings, surface temperature, composition
+
+t_surf: 800    # temperature in K
+p_surf: 0.01  # bar
+mmw: 28.0134 #2.016        # mean molecular weight in g/mol
+
+composition:   # mol fraction.
+  H2: 0 #0.9
+  N2: 1 #0.089
+  HCN: 0 #0.003
+  CO: 0 #0.003
+  CH4: 0 #0.003
+  C2H2: 0 #0.0006
+  NH3: 0 #10.2e-6
+  H2O: 0 #530.0e-9
+  CO2: 0 #0.58e-9
+
+tracked_species:  # The species which will be checked for change to see if the atmosphere is still evolving
+- H2
+- N2
+- HCN
+- CO
+- CH4
+- C2H2
+- NH3
+- H2O
+- CO2
+- O2
+- S2
+- SO2
+- H2S

@@ -1,0 +1,22 @@
+# Inputs.yaml
+
+# Provides file locations for each of the required inputs files for EVolve, EVo and FASTCHEM, and relative locations for EVo and FASTCHEM models
+
+# EVolve inputs:
+
+evolve:
+  planet: inputs/planet.yaml
+  mantle: inputs/mantle.yaml
+  atmosphere: inputs/atm.yaml
+
+# EVo input files
+
+evo:
+  env: inputs/env.yaml    # Environment file
+  chem: inputs/chem.yaml  # Magma chemistry file
+  out: inputs/output.yaml # Output specification file
+
+# FASTCHEM location and input files
+
+fastchem:
+  location: "../fastchem"

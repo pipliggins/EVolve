@@ -1,0 +1,94 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        
+        {
+            "name": "Python: Run_evolve",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evolve.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "inputs.yaml", // Input file locations
+                "--fastchem", 
+            ]
+        },
+        {
+            "name": "Python: Run_evolve_nocrust",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evolve.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "inputs.yaml", // Input file locations
+                "--fastchem",
+                "--nocrust", 
+            ]
+        },
+        {
+            "name": "Python: Run_evolve_h2escape",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evolve.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "inputs.yaml", // Input file locations
+                "--fastchem",
+                "--nocrust",
+                "--h2escape", 
+            ]
+        },
+        {
+            "name": "Python: Run_evolve_h2o_h2esc",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evolve.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "inputs.yaml", // Input file locations
+                "--fastchem",
+                "--nocrust",
+                "--h2escape_h2o", 
+            ]
+        },
+        {
+            "name": "Python: evolve_no_fc",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evolve.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "inputs.yaml", // Input file locations
+                "--nocrust", 
+            ]
+        },
+        {
+            "name": "Python: multirun",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evolve_multirun.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "multirun_test",
+                "multirun.yaml", 
+            ]
+        } 
+    ]
+}

@@ -1,0 +1,28 @@
+# multirun.yaml
+
+# List the variables you want to search over, sorted according to which yaml file the parameter is set within.
+# match the vairables name to that found in the EVolve set up file.
+
+# planet parameters
+planet:
+  melt_flux: [2.74e+10]
+
+# mantle parameters
+
+mantle:
+  # fo2: [-3, -2, -1, 0, 1, 2, 2.5, 2.75, 3, 3.2, 3.4, 3.6, 3.8, 4]
+  fo2: [-2.98, -2.95, -2.93, -2.9]
+
+  mantle_volatiles:    # ppm in the mantle
+    H2O: [314] #[240]
+    CO2: [105] #[140]
+    S: [112] #[150]
+    N: [0.73] #[1]
+
+
+# atmosphere parameters
+
+atmosphere:
+  p_surf: [0.01]
+  # t_surf: [1473, 500]
+  t_surf: [800]

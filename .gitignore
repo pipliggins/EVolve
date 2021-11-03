@@ -1,0 +1,14 @@
+#use glob syntax
+
+syntax: glob
+
+__pycache__/
+
+.vscode/*
+
+evolve_venv
+e_venv
+
+outputs/*
+
+results/*

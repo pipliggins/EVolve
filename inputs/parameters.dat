@@ -1,0 +1,23 @@
+#element abundance file   
+fastchem/input/evolve_abundances.dat
+
+#species data file    
+fastchem/input/logK.dat
+
+#accuracy of chemistry iteration
+1.0e-4
+
+#max error of Newton's method
+1.0e-5
+
+#max number of chemistry iterations 
+700000  
+
+#max number of Newton iterations
+20000
+
+#max number of Nelder-Mead iterations
+20000
+
+#max number of bisection iterations
+20000

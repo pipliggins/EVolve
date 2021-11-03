@@ -1,0 +1,11 @@
+# Planetary properties
+
+core_mass: 5.972e+27   # in g
+radius: 6.371e+6       # in m
+g: 9.81               # in m s-1
+melt_flux: 27400000000.0 #30.0e+9 # melt flux to the surface, m3/yr (based on estimate from Ortenzi 2020 for earth sized planet)
+irradiation: 1        # stellar irradiaiton in some units
+set_melt_atomic_weights: true   # Allow EVo to calculate the melt speciation at volatile saturation rather than enforcing the mantle speciation.
+timestep: 2.0e+7 #5.0e+6 #2.0e+6 #50000       # in years
+max_timestep: 600 #600     # max number of timesteps to execute if atmosphere never reaches steady state
+snapshot: false       # loop through time to evolve an atmosphere? (equivalent to single_step in evo)
