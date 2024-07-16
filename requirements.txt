@@ -1,7 +1,8 @@
-matplotlib==3.3.4
+matplotlib>=3.3.4
 numpy>=1.19.5
-pandas==1.1.5
-PyYAML==5.3.1
-ruamel.yaml==0.16.12
-scipy==1.5.4
-sympy==1.9
+pandas
+PyYAML>=5.3.1
+ruamel.yaml>=0.16.12
+scipy>=1.5.4
+sympy>=1.9
+evo @ git+https://github.com/pipliggins/EVo@main

@@ -1,10 +1,4 @@
-[submodule "evo"]
-	path = evo
-	url = git@github.com:pipliggins/EVo_2.0.git
-	ignore = dirty
-	branch = mpfr_removed
 [submodule "fastchem"]
 	path = fastchem
-	url = git@github.com:exoclime/FastChem.git
-	branch = fastchem_2_dev
+	url = git@github.com:NewStrangeWorlds/FastChem.git
 	ignore = dirty

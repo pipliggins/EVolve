@@ -13,21 +13,24 @@ EVolve is written in Python3, and is incompatible with Python 2.7. Two very usef
 
 1. Clone the repository **with submodules** and enter directory
    ```
-   git clone --recurse-submodules git@github.com:pipliggins/evolve.git
+   git clone --recurse-submodules git@github.com:pipliggins/EVolve.git
    ```
-   **Note:** If you don't clone with submodules you won't get the two modules used to run EVolve, the EVo volcanic degassing model and the FastChem equilibrium chemistry code.
+   **Note:** If you don't clone with submodules you won't get one of the modules used to run EVolve, the FastChem equilibrium chemistry code.
    
 2. Compile [FastChem](https://github.com/exoclime/FastChem):
    ```
    cd fastchem
-   git submodules update --init --recursive
-   mkdir build & cd build
+   git submodule update --init --recursive
+   mkdir build
+   cd build
    cmake -DUSE_PYTHON==ON ..
    make
    ```
    This will pull the pybind11 module required for the python bindings, and compile both the C++ code, and the python bindings which are used in EVolve to conect to FastChem.
    
-   **Note:** FastChem is an external C++ module, used to compute atmospheric equilibrium chemistry. Therefore, to run on Windows, I recommend using WSL (Windows Subsystem for Linux) to make the process of compiling the C code easier. If you encounter installation issues relating to the cmake version, I found the [accepted answer here](https://askubuntu.com/questions/1203635/installing-latest-cmake-on-ubuntu-18-04-3-lts-run-via-wsl-openssl-error) to work for me. A list of the suggested terminal commands can also be found at the bottom of this README file.   
+   **Note:** FastChem is an external C++ module, used to compute atmospheric equilibrium chemistry. Therefore, to run on Windows, I recommend using WSL (Windows Subsystem for Linux) to make the process of compiling the C code easier. If you encounter installation issues relating to the cmake version, I found the [accepted answer here](https://askubuntu.com/questions/1203635/installing-latest-cmake-on-ubuntu-18-04-3-lts-run-via-wsl-openssl-error) to work for me. A list of the suggested terminal commands can also be found at the bottom of this README file.
+
+   **Note:** FastChem currently cannot be compiled on Apple Macs which contain Apple silicon chips (M* processors) - https://github.com/NewStrangeWorlds/FastChem/issues/9 
   
 
 3. Install dependencies using either Pip install or Anaconda. Check [requirements.txt](https://github.com/pipliggins/evolve/blob/master/requirements.txt) for full details.
@@ -35,15 +38,7 @@ EVolve is written in Python3, and is incompatible with Python 2.7. Two very usef
    ```
    pip3 install -r requirements.txt
    ```
- 
-   **Troubleshoot:**
-   The GMPY2 module requires several libraries (MPFR and MPC) which are not pre-loaded in some operating systems, particularly Windows. If the GMPY2 module does not install, or you have other install issues, try
-   ```
-   pip3 install wheel
-   sudo apt install libgmp-dev libmpfr-dev libmpc-dev
-   pip3 install -r requirements.txt
-   ```
-   
+    
 # Running EVolve #
 
 EVolve can be run either with or without the FastChem equilibrium chemistry in the atmosphere. To run Evolve with FastChem, from the main directory of EVolve run
@@ -65,8 +60,6 @@ All the input models for EVolve, and the submodules EVo and FastChem are stored 
 | chem.yaml       | EVo             | Contains the major oxide composition of the magma being input to EVo                                                                                                                                           |
 | env.yaml        | EVo             | Contains the majority of the run settings and volatile contents for the EVo run.                                                                                                                               |
 | output.yaml     | EVo             | Stops any graphical input from EVo compared to it's default settings                                                                                                                                           |
-| config.input    | FastChem        | Sets the names and locations for input and output files for FastChem, and output settings                                                                                                                      |
-| parameters.dat  | FastChem        | Location of elemental abundance files, and configuration parameters                                                                                                                                            |
 
 Files highlighted in bold should be edited by the user; all others are optimied for EVolve and/or will be edited by the code as it is running.
 Explainations for each parameter setting in the EVolve files can be found at the bottom of this README file.
