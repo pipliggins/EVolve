@@ -1,7 +1,3 @@
-[submodule "evo"]
-	path = evo
-	url = git@github.com:pipliggins/EVo.git
-	ignore = dirty
 [submodule "fastchem"]
 	path = fastchem
 	url = git@github.com:NewStrangeWorlds/FastChem.git
