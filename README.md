@@ -13,7 +13,7 @@ EVolve is written in Python3, and is incompatible with Python 2.7. Two very usef
 
 1. Clone the repository **with submodules** and enter directory
    ```
-   git clone --recurse-submodules git@github.com:pipliggins/evolve.git
+   git clone --recurse-submodules git@github.com:pipliggins/EVolve.git
    ```
    **Note:** If you don't clone with submodules you won't get the two modules used to run EVolve, the EVo volcanic degassing model and the FastChem equilibrium chemistry code.
    

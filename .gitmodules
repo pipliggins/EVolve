@@ -1,8 +1,8 @@
 [submodule "evo"]
 	path = evo
-	url = git@github.com:pipliggins/EVo_2.0.git
+	url = git@github.com:pipliggins/EVo.git
 	ignore = dirty
-	branch = mpfr_removed
+	branch = main
 [submodule "fastchem"]
 	path = fastchem
 	url = git@github.com:exoclime/FastChem.git
