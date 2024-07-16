@@ -3,3 +3,7 @@
 	url = git@github.com:exoclime/FastChem.git
 	branch = fastchem_2_dev
 	ignore = dirty
+[submodule "evo"]
+	path = evo
+	url = git@github.com:pipliggins/EVo.git
+	ignore = dirty
